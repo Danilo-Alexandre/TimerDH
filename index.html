@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- TITULO -->
+    <title>Timer DH</title>
+    <link rel="icon" type="image/x-icon" href="./imgs/stopwatch.png">
+    <!-- FONTES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Text:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <main>
+        <section class="display"> 
+            <!-- LOGO DH-->
+            <img class="dh-logo" src="./imgs/logodh.jpg" alt="">
+            <!-- CAFÉS -->
+            <div class="coffee-container">
+                <img class="coffee-black" src="./imgs/coffee.png" alt="">
+            </div>
+
+            <img id="coffee" src="./imgs/coffee.png" alt="">
+            <!-- TEXTO -->
+            <span></span>
+            
+            <!-- DATA -->
+            <div class="text">
+                <h5>Full Stack PaD - 0622CDFSPCN16BRED</h5>
+                <div class="text-date">
+                    <h4>Aula do dia</h4>
+                    <span class="date"> </span>
+                </div>
+            </div>
+            <!-- INPUT -->
+            <input id="input-minutes" type="number" placeholder="Alterar os minutos">
+            <!-- NÚMEROS -->
+            <div class="numbers">
+                <h2 id="minutes">00</h2>
+                <h2 id="dois-pontos">:</h2>
+                <h2 id="seconds">00</h2>
+            </div>
+            <!-- BOTÕES -->
+            <div class="start-stop">
+                <button id="start">Iniciar Contagem Regressiva</button>
+                <button id="reset">Reiniciar Contagem Regressiva</button>
+            </div>
+
+        </section>
+    </main>
+    <script src="js/script.js" ></script>
+</body>
+</html>

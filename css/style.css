@@ -1,0 +1,220 @@
+
+/* <<<<<<<<<<<<<<<<<    ANIMAÇÕES   >>>>>>>>>>>>>>>>> */
+@keyframes fade{
+    from {height: 30px;}
+    to{
+        height: 142px;
+        display:none; 
+    }
+}
+
+@keyframes blink{
+    from{
+        filter: opacity(0.4) ;
+    }
+    to{filter: opacity(1) saturate(0);}
+}
+
+/* <<<<<<<<<<<<<<<<<    GLOBAL   >>>>>>>>>>>>>>>>> */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: radial-gradient(ellipse at center, #ffffff, #a7a7a7);
+    
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* <<<<<<<<<<<<<<<<<    CONTEINER PRINCIPAL   >>>>>>>>>>>>>>>>> */
+
+.display{
+    background-color: rgba(255, 255, 255, 0.658);
+    box-shadow: -5px 5px 10px 3px grey;
+    border-radius: 10px;
+    padding: 50px;
+    
+    width: 500px;
+    height: 400px;
+
+    position:relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+/* <<<<<<<<<<<<<<<<<    TEXTOS CONTAINER   >>>>>>>>>>>>>>>>> */
+
+.text{
+    position: absolute;
+    top: 10px;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+}
+.text-date{
+    display: flex;
+    gap: 10px;
+}
+/* <<<<<<<<<<<<<<<<<    NÚMEROS   >>>>>>>>>>>>>>>>> */
+
+.numbers{
+    font-family: 'Big Shoulders Stencil Text', cursive;
+    font-size: 50px;
+    letter-spacing: 10px;
+    
+    display: flex;
+    align-items: center;
+}
+#dois-pontos{
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+/* <<<<<<<<<<<<<<<<<    BOTÕES    >>>>>>>>>>>>>>>>> */
+
+.start-stop{
+    width: 310px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#start:hover, #reset:hover{
+    cursor: pointer;
+}
+
+
+#start{
+    background-color: green;
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: 1px black solid;
+    border-radius: 10px;
+}
+
+#reset{
+    background-color: #dc0000;
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: 1px black solid;
+    border-radius: 10px;
+}
+
+/* <<<<<<<<<<<<<<<<<    LOGO   >>>>>>>>>>>>>>>>> */
+
+.dh-logo{
+    border: black 2px solid;
+    border-radius: 50%;
+    
+    width: 100px;
+    height: 100px;
+    
+    object-fit: cover;
+    object-position: -12px;
+    
+    position: absolute;
+    top: -50px;
+    left: -50px;
+}
+/* <<<<<<<<<<<<<<<<<    CAFÉ COLORIDO   >>>>>>>>>>>>>>>>> */
+
+#coffee{    
+    width: 160px;
+    
+    position: absolute;
+    top: -95px;
+    right: -80px;
+    
+    filter: saturate(2);
+    
+    animation-name: blink;
+    animation-delay: 600s;
+    animation-duration: 1.5s;
+    animation-direction: alternate-reverse;
+    animation-play-state: paused; 
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    transition: all 2s;
+}
+
+/* <<<<<<<<<<<<<<<<<    CAFÉ CINZA   >>>>>>>>>>>>>>>>> */
+
+.coffee-black{    
+    height: 160px;
+}
+
+.coffee-container{
+    height: 150px;
+    width: 160px;
+    
+    filter: saturate(0);
+    
+    position: absolute;
+    top: -95px;
+    right: -80px;
+    overflow: hidden;
+    z-index: 1;
+    
+    animation-name: fade;
+    animation-duration: 600s;
+    animation-fill-mode:backwards;
+    animation-play-state: paused; 
+    animation-timing-function: linear;   
+}
+
+/* <<<<<<<<<<<<<<<<<    INPUT   >>>>>>>>>>>>>>>>> */
+
+#input-minutes{
+    width: 150px;
+    position: relative;
+    bottom: 30px;
+}
+
+/* <<<<<<<<<<<<<<<<<    RESPONSIVIDADE MENOR QUE 650PX   >>>>>>>>>>>>>>>>> */
+
+@media (max-width: 650px){
+    .coffee-container{
+        right: unset;
+        top: 385px;
+    }
+    #coffee{
+        right: unset;
+        top: 385px;
+    }
+    .dh-logo{
+        left: unset;
+        top: -110px;
+    }
+    .display{
+        width: 80vw;
+    }
+    .start-stop{
+        width: 47vw;
+    }
+    #start{
+        padding: 10px 31px;
+    }
+    #input-minutes{
+        position: absolute;
+        bottom: 328px;
+    }
+
+}
